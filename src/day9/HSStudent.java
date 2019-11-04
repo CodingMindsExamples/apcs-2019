@@ -6,11 +6,13 @@ package day9;
 // non-specific data
 public class HSStudent {
 
-	// 1. data
+	// 1. data	
+	static int count;
+	
 	String name;
 	int age;
 	String studentId;
-	int gradeLevel;
+	int gradeLevel;	
 	
 	// 2. method/function
 	public void printNameTag() {
@@ -20,5 +22,9 @@ public class HSStudent {
 		System.out.println("# Student Id: " + studentId + "           #");
 		System.out.println("# Grade Level: " + gradeLevel + "               #");
 		System.out.println("################################");
+	}
+	
+	public static void printSystemVersionNum() {
+		System.out.println("Student Management System V1.005");
 	}
 }

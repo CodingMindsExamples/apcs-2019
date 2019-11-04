@@ -29,7 +29,8 @@ public class PrimeNumberChecker {
 		System.out.println("Please input the integer: ");
 		int range = s.nextInt();
 		for(int i = 1; i <= range; i++) {
-			boolean result = isPrimeNumber(i);
+			PrimeNumberChecker pnc1 = new PrimeNumberChecker();
+			boolean result = pnc1.isPrimeNumber(i);
 			if (result) {
 				System.out.println(i);
 			}			

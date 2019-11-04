@@ -31,6 +31,12 @@ public class LotteryGame {
 		playerBalance = balance;
 	}
 	
+	public LotteryGame(int playerBalance, int totalWins, int totalLosts) {
+		this.playerBalance = playerBalance;
+		this.totalWins = totalWins;
+		this.totalLosts = totalLosts;
+	}
+	
 	private void generateWinningNumber() {
 		System.out.println("Now generating the winning number today ... ");
 		Random r = new Random();
@@ -98,5 +104,15 @@ public class LotteryGame {
 		generateWinningNumber();
 		processLottery();
 		showResult();
+	}
+	
+	public void playLotteryRound(int totalRounds) {
+		for(int i = 0; i < totalRounds; i++) {
+			askPlayerNumber();
+			setBetAmount();
+			generateWinningNumber();
+			processLottery();
+			showResult();
+		}
 	}
 }

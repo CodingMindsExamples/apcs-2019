@@ -12,6 +12,7 @@ public class StudentApplication {
 		Random r2 = new Random();
 		r2.nextInt();
 		
+		
 		// Class vs Object 对象 instance 实例
 		// stu1: Object
 		HSStudent stu1 = new HSStudent(); 
@@ -19,14 +20,24 @@ public class StudentApplication {
 		stu1.studentId = "0001";
 		stu1.age = 14;
 		stu1.gradeLevel = 9;
+		HSStudent.count++;
 		stu1.printNameTag();
+		
 		// stu2: Object 对象 instance 实例
 		HSStudent stu2 = new HSStudent();
-		stu2.name = "Eric";
+		stu2.name = "Eric";		
 		stu2.age = 15;
 		stu2.gradeLevel = 10;
 		stu2.studentId = "0002";
+		HSStudent.count++;
 		stu2.printNameTag();
+		
+		System.out.println("Total Student: " + HSStudent.count);
+//		System.out.println("Total Student: " + stu1.count);
+//		System.out.println("Total Student: " + stu2.count);
+		HSStudent.printSystemVersionNum();
+		
+		System.out.println(stu2.age);
 	}
 
 }
